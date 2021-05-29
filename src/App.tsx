@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { DatePicker } from 'antd';
 import 'antd/dist/antd.css';
 import Request from './utils/request';
-Request('test', 'GET',{a:'a'});
+Request('/1979779', 'GET',{scope:'response'});
 export default function App() {
   return (
     <Router>

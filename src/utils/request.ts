@@ -1,9 +1,10 @@
+import config from "../config/index";
 // 新营销平台返回类型
 class XYXResponse {
     code: number = 200;
     data: object = {};
 }
-const baseUrl = "";
+const baseUrl = config.baseUrl;
 const defaultHeaders = { "Content-Type": "text/plain;charset=UTF-8" };
 const request = async (url: string, method: string, data?: object, headers?: object, cancelToken: boolean = false) => {
     let requestUrl = baseUrl + url;
@@ -22,7 +23,6 @@ const request = async (url: string, method: string, data?: object, headers?: obj
                     params += `${key}=${value}&`;
                 }
             }
-            params = params.substring(0, params.length - 2);
             requestUrl = `${requestUrl}?${params}`;
         } else {
             option.body = JSON.stringify(data);
