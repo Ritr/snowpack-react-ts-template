@@ -4,12 +4,8 @@
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prepare":"husky install"
   },
   "dependencies": {
     "antd": "^4.16.0",
