@@ -1,25 +1,35 @@
-# New Project
+### 启动
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+```jsx
+npm run start
+```
 
-## Available Scripts
+### 打包
 
-### npm start
+```jsx
+npm run build
+```
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+### 格式化
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+```jsx
+npm run format
+```
 
-### npm run build
+### 提交前检查
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+代码提交前会执行.husky/pre-commit文件内的代码，你可以自定义pre-commit的脚本
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
+### 环境变量配置
 
-### npm test
+1. 公共变量
 
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+    /src/config/index.ts
+
+2. 开发环境变量
+
+    /src/config/development.ts
+
+3. 生产环境变量
+
+    /src/config/production.ts
