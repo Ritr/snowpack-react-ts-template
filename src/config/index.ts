@@ -2,14 +2,14 @@ import devConfig from "./development";
 import proConfig from "./production";
 
 class EnvConfig {
-  baseUrl?: string = "";
+    baseUrl?: string = "";
 }
 const mode = import.meta.env.MODE;
 let commonConfig = {};
 let config: EnvConfig = {};
 if (mode === "development") {
-  config = { ...commonConfig, ...devConfig };
+    config = { ...commonConfig, ...devConfig };
 } else if (mode === "production") {
-  config = { ...commonConfig, ...proConfig };
+    config = { ...commonConfig, ...proConfig };
 }
 export default config;
